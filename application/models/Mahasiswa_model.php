@@ -1,4 +1,4 @@
-	<?php 
+<?php 
 
 class Mahasiswa_model extends CI_Model {
 
@@ -6,5 +6,10 @@ class Mahasiswa_model extends CI_Model {
 	{
 		$query = $this->db->get('mahasiswa');
 		return $query->result_array();
+	}
+
+	public function tambah()
+	{
+
 	}
 }

@@ -2,7 +2,7 @@
 
 class Home extends CI_Controller{
 
-	public function index($nama = 'misbah'){
+	public function index($nama = 'bias'){
 		
 		$data['judul'] = 'Home CI_CRUD';
 		$data['nama'] = $nama;
