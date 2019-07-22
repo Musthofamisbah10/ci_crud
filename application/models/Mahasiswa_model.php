@@ -8,8 +8,15 @@ class Mahasiswa_model extends CI_Model {
 		return $query->result_array();
 	}
 
-	public function tambah()
+	public function tambahDataMahasiswa()
 	{
+		$data = [
+			"nama" => $this->input->post('nama', true),
+			"nim" => $this->input->post('nim', true),
+			"email" => $this->input->post('email', true),
+			"jurusan" => $this->input->post('jurusan', true)
+		];
 
+		$this->db->insert('mahasiswa', $data);
 	}
 }
