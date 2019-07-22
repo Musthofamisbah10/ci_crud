@@ -2,7 +2,7 @@
 	
 	<div class="row mt-3">
 		<div class="col-lg-6">
-			eds
+			<a href="<?php echo base_url() ?>mahasiswa/tambah" class="btn btn-primary">Tambah Data Mahasiswa</a>
 		</div>
 	</div>
 
