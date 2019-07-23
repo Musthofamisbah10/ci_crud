@@ -23,10 +23,12 @@ class Mahasiswa extends CI_Controller{
 
 		$data['judul'] = 'Form Tambah Data Mahasiswa';
 
+		// set flash data
 		$this->form_validation->set_rules('nama', 'Nama', 'required');
 		$this->form_validation->set_rules('nim', 'Nim', 'required');
 		$this->form_validation->set_rules('email', 'Email', 'required|valid_email');
 
+		// flash data
 		if( $this->form_validation->run() == FALSE  ){
 			$this->load->view('templates/header', $data);
 			$this->load->view('mahasiswa/tambah');
@@ -37,6 +39,16 @@ class Mahasiswa extends CI_Controller{
 			redirect('mahasiswa');
 		}
 		
-		
+	}
+
+	public function hapus($id)
+	{
+		$this->mahasiswa_model->hapusDataMahasiswa($id);
+
+		// flashdata
+		$this->session->set_flashdata('flash', 'Dihapus');
+
+		redirect('mahasiswa');
+
 	}
 }

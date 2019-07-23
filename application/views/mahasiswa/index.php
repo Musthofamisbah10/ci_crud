@@ -26,7 +26,8 @@
 				<?php foreach ($mahasiswa as $mhs): ?>
 					<li class="list-group-item">
 						<?php echo $mhs['nama']; ?>
-						<a href="<?php echo base_url(); ?> mahasiswa/hapus/ <?php echo $mhs['id']; ?>" class="badge badge-danger float-right" onclick="return confirm('Yakin Mau Hapus ?');">Hapus</a>		
+						<a href="<?php echo base_url(); ?>mahasiswa/detail/<?php echo $mhs['id']; ?>" class="badge badge-primary float-right">Detail</a>
+						<a href="<?php echo base_url(); ?>mahasiswa/hapus/<?php echo $mhs['id']; ?>" class="badge badge-danger float-right" onclick="return confirm('Yakin Mau Hapus ?');">Hapus</a>		
 					</li>
 				<?php endforeach; ?>
 			</ul>

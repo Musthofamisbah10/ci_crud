@@ -19,4 +19,10 @@ class Mahasiswa_model extends CI_Model {
 
 		$this->db->insert('mahasiswa', $data);
 	}
+
+	public function hapusDataMahasiswa($id)
+	{
+		$this->db->where('id', $id);
+		$this->db->delete('mahasiswa');
+	}
 }
