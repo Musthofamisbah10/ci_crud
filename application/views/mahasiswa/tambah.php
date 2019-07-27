@@ -8,28 +8,22 @@
 					Form Tambah Data Mahasiswa
 				</div>
 				<div class="card-body">
-					<!-- pesan error validation -->
-					<?php if ( validation_errors() ): ?>
-						<div class="alert alert-danger alert-dismissible fade show" role="alert">
-						<?php echo validation_errors(); ?>
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						    <span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<?php endif ?>
 
 					<form action="" method="post">
 						<div class="form-group">
 						    <label for="nama">Nama</label>
 						    <input type="text" class="form-control" id="nama" name="nama">
+						    <small class="form-text text-danger"><?php echo form_error('nama'); ?></small>
 						</div>
 						<div class="form-group">
 						    <label for="nama">Nim</label>
 						    <input type="text" class="form-control" id="nim" name="nim">
+						    <small class="form-text text-danger"><?php echo form_error('nim'); ?></small>
 						</div>
 						<div class="form-group">
 						    <label for="nama">email</label>
 						    <input type="email" class="form-control" id="email" name="email">
+						    <small class="form-text text-danger"><?php echo form_error('email'); ?></small>
 						</div>
 						<div class="form-group">
 						    <label for="jurusan">Jurusan</label>
